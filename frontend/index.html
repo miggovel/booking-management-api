@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Central | Professional Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Auth Section -->
+    <section id="auth-view" class="animate-fade">
+      <div class="glass-card">
+        <h1>Booking Central</h1>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Accede a tu panel de gestión profesional.</p>
+        
+        <form id="login-form">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="admin@example.com" required>
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Iniciar Sesión</button>
+        </form>
+        <p id="auth-error" style="color: var(--error); margin-top: 1rem; font-size: 0.875rem; display: none;"></p>
+      </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard-view">
+      <header class="header animate-fade">
+        <div>
+          <h1>Panel Principal</h1>
+          <p style="color: var(--text-muted);">Gestiona tus locales y recursos disponibles.</p>
+        </div>
+        <button id="logout-btn" class="btn" style="background: rgba(239, 68, 68, 0.1); color: var(--error);">Cerrar Sesión</button>
+      </header>
+
+      <div id="venues-grid" class="grid animate-fade">
+        <!-- Venues will be loaded here -->
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
